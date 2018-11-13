@@ -1,0 +1,29 @@
+{{!-- 公用footer --}}
+<script src="{{baseUrl "/js/jquery/jquery-1.11.3.min.js"}}"></script>
+<script src="{{baseUrl "/js/bootstrap/bootstrap-3.3.5.min.js"}}"></script>
+<script>
+    $(function(){
+        $("#to_top").click(function() {
+            $("html,body").animate({scrollTop:0}, 500);
+        });
+
+        $("#contact-box>a").click(function () {
+            $(this).find(".contactDetail").toggle();
+            $(this).siblings().find(".contactDetail").hide();
+        })
+        navScroll();
+        $(window).scroll(function () {
+            navScroll();
+        });
+        function navScroll() {
+            var bannerH = $(".banner-box").height();
+            var scrollH = $("html").scrollTop();
+            var navH = $("#header").height();
+            if(scrollH > (bannerH - navH )){
+                $("#header").css("background","rgba(0, 0, 0, 0.9)")
+            }else {
+                $("#header").css("background","rgba(0, 0, 0, 0.5)")
+            }
+        }
+    })
+</script>

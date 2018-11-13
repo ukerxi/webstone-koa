@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{>header}}
+</head>
+<body>
+    {{>view_header}}
+    <div id="body">
+        <div id="index-page">
+            <div class="banner-box">
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    {{#if data.banner_list.length}}
+                        <ol class="carousel-indicators">
+                            {{#each data.banner_list}}
+                                <li data-target="#carousel" data-slide-to="{{@index}}" {{#if @first}}class="active"{{/if}}></li>
+                            {{/each}}
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            {{#each data.banner_list}}
+                                <div class="item {{#if @first}}active{{/if}}">
+                                    <a href="{{url}}" target="_blank"><img class="d-block w-100" src="{{img_url}}" style="width: 100%; display: block;"></a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="container">
+                <div class="title">
+                    <h2 class="text-center">企业全方位出行解决方案</h2>
+                    <span style="width:40px; height:4px; background:#E74C3C;"></span>
+                </div>
+                <div class="row solution-box">
+                    <div class="col-xs-4 so-item">
+                        <div class="content">
+                            <img src="{{baseUrl "/images/index/icon1.png"}}" class="icon_img"/>
+                            <h3 class="text-center" style="color: #333;">企业用车</h3>
+                            <span style="display:block; margin: 20px auto 25px; width:30px; height:4px; background: #eee;"></span>
+                            <ul class="center-block">
+                                <li style="color:#E74C3C;"><span style="color:#666; line-height: 24px;">满足企业的商务接待、团建年会、接送机、跨境等用车需求</span></li>
+                                <li style="color:#E74C3C;"><span style="color:#666; line-height: 24px;">自助化线上平台用车流程，操作简单，可视可控，舒心出行</span></li>
+                            </ul>
+                        </div>
+                        <div class="active hidden">
+                            <a class="center-block" href="#"><img src="{{baseUrl "/images/index/activeCircle.png"}}" class="icon_active"/></a>
+                            <h2 class="text-center" style="color: #333;">企业班车</h2>
+                            <a class="center-block text-center" href="#" style="margin:30px 0 50px; line-height: 14px; color: #E74C3C;">查看详情&nbsp;>></a>
+                            <span class="center-block" style="width: 90%; height: 4px; background-color: #E74C3C;"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 so-item">
+                        <div class="content">
+                            <img src="{{baseUrl "/images/index/icon2.png"}}" class="icon_img"/>
+                            <h3 class="text-center" style="color: #333;">企业班车</h3>
+                            <span style="display:block; margin: 20px auto 25px; width:30px; height:4px; background: #eee;"></span>
+                            <ul class="center-block">
+                                <li style="color:#E74C3C;"><span style="color:#666; line-height: 24px;">数字化运营：员工乘车体验好，节省员工通勤成本</span></li>
+                                <li style="color:#E74C3C;"><span style="color:#666; line-height: 24px;">一站式服务：企业监管省心，数据报表可视可控）</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 so-item">
+                        <div class="content">
+                            <img src="{{baseUrl "/images/index/icon3.png"}}" class="icon_img"/>
+                            <h3 class="text-center" style="color: #333;">SAAS系统</h3>
+                            <span style="display:block; margin: 20px auto 25px; width:30px; height:4px; background: #eee;"></span>
+                            <ul class="center-block">
+                                <li style="color:#E74C3C;"><span style="color:#666; line-height: 24px;">企业通勤管理服务平台，一站式乘车管理、车务管理、财务管理、运营管理四大功能，帮助企业提升员工通勤体验，提高监管管理效率，降低企业用车成本。</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="data_box">
+                <img src="{{baseUrl "/images/index/achievement.png"}}"/>
+            </div>
+            <div class="scene-wrap">
+                <div class="container">
+                    <div class="title">
+                        <h2 class="text-center">满足各种企业用车场景</h2>
+                        <span style="width:40px; height:4px; background:#E74C3C;"></span>
+                    </div>
+                    <div class="scene-box">
+                        <div class="swiper-container swiper-scene">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{baseUrl "/images/index/sc2.png"}}"/>
+                                    <div>
+                                        <p>商务接待</p>
+                                        <span class="center-block"></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{baseUrl "/images/index/sc1.png"}}"/>
+                                    <div>
+                                        <p>上下班通勤</p>
+                                        <span class="center-block"></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{baseUrl "/images/index/sc3.png"}}"/>
+                                    <div>
+                                        <p>展会活动</p>
+                                        <span class="center-block"></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{baseUrl "/images/index/sc3.png"}}"/>
+                                    <div>
+                                        <p>展会活动</p>
+                                        <span class="center-block"></span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{baseUrl "/images/index/sc3.png"}}"/>
+                                    <div>
+                                        <p>展会活动</p>
+                                        <span class="center-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add button -->
+                        <div class="swiper-button-prev hidden-xs hidden-sm hidden-md"></div>
+                        <div class="swiper-button-next hidden-xs hidden-sm hidden-md"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="company-wrap">
+                <div class="container">
+                    <div class="title">
+                        <h2 class="text-center">众多企业共同选择</h2>
+                        <span style="width:40px; height:4px; background:#E74C3C;"></span>
+                    </div>
+                    <div class="company-box">
+                        <ul class="clearfix">{{{brandList}}}</ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-wrap">
+                <div class="container">
+                    <div class="title">
+                        <h2 class="text-center">新闻动态</h2>
+                        <span style="width:40px; height:4px; background:#E74C3C;"></span>
+                    </div>
+                    <div class="news-box">
+                        <div class="swiper-container swiper-news">
+                            <div class="swiper-wrapper">
+                                {{#each data.news_list}}
+                                    <a class="swiper-slide" href="/news?id={{id}}">
+                                        <div>
+                                            <img src="{{thumbnail_img}}"/>
+                                        </div>
+                                        <p>{{title}}</p>
+                                    </a>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>view_footer}}
+</body>
+{{>footer}}
+<script src="{{baseUrl "/js/swiper/swiper.min.js"}}"></script>
+<script type="text/javascript">
+    var swiperScene = new Swiper('.swiper-scene', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: 1000,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
+    var swiperNews = new Swiper('.swiper-news', {
+        effect: 'coverflow',
+        loop:true,
+        autoplay: 1000,
+        initialSlide :1,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 2.7,
+        spaceBetween: 40,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+    });
+    // 测试 ajax 请求
+    $(function () {
+        // $.post("/api/index.php/official/news/get_list",{city: '深圳', show_type: 9},function(result){
+        // 	console.log(result)
+        // });
+    });
+</script>
+
+</html>

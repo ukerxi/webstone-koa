@@ -1,0 +1,42 @@
+{
+  "name": "webstone",
+  "version": "0.1.0",
+  "description": "node.js CMS and web app framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "start": "node webstone.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukerxi/webstone.git"
+  },
+  "author": "ukerxi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ukerxi/webstone/issues"
+  },
+  "homepage": "https://github.com/ukerxi/webstone#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "glob": "^7.1.2",
+    "handlebars": "^4.0.11",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.4",
+    "lodash": "^4.17.10",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.3.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}
